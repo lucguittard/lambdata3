@@ -2,13 +2,12 @@
 pack2 - a limited set of df engineering tools
 """
 
-import pandas as pd 
-import numpy as np 
+import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 
 
 # code to train/test/val split a df
-
 
 
 def splitter(df):
@@ -22,23 +21,24 @@ def detail_na(df):
     print(nas)
 
 
+def null(X):
+    null_list = X.isnull().sum()
+    return null_list
+
+
 # code to make a class
 
 
 class Complex:
-    """ 
-    Class for complex numbers 
     """
-    def __init__(self, realpart, imagpart):        
+    Class for complex numbers
+    """
+    def __init__(self, realpart, imagpart):
         self.r = realpart
         self.i = imagpart
 
-    """ 
-    Method to add together two complex numbers 
     """
-    def add(self):
-        self.added = (self.r+self.i)
-
-x = Complex(3.0, -4.5)
-x.r, x.i
-
+    Method to add together two complex numbers
+    """
+    def add(self, added):
+        self.add = (self.r+self.i)
